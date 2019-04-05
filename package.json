@@ -1,0 +1,29 @@
+{
+  "name": "static-page-generator",
+  "version": "1.0.0",
+  "description": "A basic static page generator for Node.js",
+  "main": "index.js",
+  "scripts": {
+    "build-pages": "node ./build_scripts/builder.js",
+    "start": "concurrently --kill-others \"nodemon -e js,json,css,md -i build -x \\\"npm run build-pages\\\"\" \"live-server ./build\""
+  },
+  "keywords": [
+    "static",
+    "page",
+    "generator",
+    "html",
+    "build",
+    "start",
+    "server"
+  ],
+  "author": "Harshith Pabbati",
+  "license": "MIT",
+  "dependencies": {
+    "concurrently": "^3.5.1",
+    "fs-extra": "^4.0.2",
+    "live-server": "^1.2.0",
+    "markdown-it": "^8.4.0",
+    "nodemon": "^1.12.1"
+  },
+  "devDependencies": {}
+}
